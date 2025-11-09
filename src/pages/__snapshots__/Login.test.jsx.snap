@@ -1,0 +1,129 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Login Test Should render Login component 1`] = `
+<div>
+  <div>
+    <div
+      class="min-h-screen flex relative"
+      style="background-color: rgb(153, 150, 235);"
+    >
+      <img
+        alt="nexmin logo"
+        class="hidden lg:block absolute left-10 top-6 w-20 h-20 rounded-full bg-white p-1"
+        src="/logo.svg"
+        style="box-shadow: 0 18px 44px rgba(0, 0, 0, 0.5); border: 3px solid rgba(255,255,255,0.95); z-index: 5;"
+      />
+      <div
+        class="hidden lg:flex lg:w-1/2 items-center justify-center p-8 overflow-hidden"
+        style="z-index: 1;"
+      >
+        <div
+          class="w-full max-w-3xl"
+          style="border-radius: 12px; overflow: hidden; box-shadow: 0 25px 60px rgba(0, 0, 0, 0.5); background: white;"
+        >
+          <img
+            alt="nexmin delivery service"
+            class="w-full h-full object-cover"
+            src="/login-image.png"
+            style="object-position: center; display: block; width: 100%; height: 100%; max-height: 520px;"
+          />
+        </div>
+      </div>
+      <div
+        class="w-full lg:w-1/2 flex items-center justify-center p-4"
+        style="z-index: 2;"
+      >
+        <div
+          class="max-w-md w-full bg-[#e6e6ff] rounded-lg p-8"
+          style="box-shadow: 0 18px 50px rgba(0, 0, 0, 0.5); border-radius: 12px; position: relative;"
+        >
+          <div
+            class="flex items-center justify-center mb-6"
+          >
+            <img
+              alt="nexmin logo"
+              class="w-20 h-20"
+              src="/logo.svg"
+            />
+          </div>
+          <h1
+            class="text-xl md:text-2xl font-semibold text-center mb-4 md:mb-6"
+            style="color: rgb(26, 26, 26); line-height: 1.25;"
+          >
+            Admin Dashboard — Login
+          </h1>
+          <form
+            class="space-y-4 md:space-y-6"
+          >
+            <div>
+              <label
+                class="block text-sm md:text-base font-medium mb-2"
+                style="color: rgb(45, 55, 72);"
+              >
+                Email
+              </label>
+              <input
+                class="block w-full border border-gray-300 rounded-lg text-base"
+                placeholder="Enter email"
+                required=""
+                style="padding: 0.875rem 1rem; min-height: 44px; line-height: 1.5;"
+                type="email"
+                value=""
+              />
+            </div>
+            <div>
+              <label
+                class="block text-sm md:text-base font-medium mb-2"
+                style="color: rgb(45, 55, 72);"
+              >
+                Password
+              </label>
+              <input
+                class="block w-full border border-gray-300 rounded-lg text-base"
+                placeholder="Enter password"
+                required=""
+                style="padding: 0.875rem 1rem; min-height: 44px; line-height: 1.5;"
+                type="password"
+                value=""
+              />
+            </div>
+            <button
+              class="w-full text-white rounded-lg font-medium disabled:opacity-60 transition-all duration-200 shadow-md hover:shadow-lg text-base md:text-lg"
+              style="box-shadow: 0 8px 20px rgba(0, 0, 0, 0.5); padding: 0.875rem 1.5rem; min-height: 44px; line-height: 1.5;"
+              type="submit"
+            >
+              Login
+            </button>
+          </form>
+          <div
+            class="mt-4 md:mt-6 text-sm md:text-base"
+            style="color: rgb(74, 85, 104); line-height: 1.75;"
+          >
+            <p
+              class="font-medium mb-1"
+            >
+              Test accounts:
+            </p>
+            <ul
+              class="list-disc pl-5 space-y-1"
+            >
+              <li>
+                Super Admin: admin@company.com / admin123
+              </li>
+              <li>
+                Accountant: accountant@company.com / acct123
+              </li>
+              <li>
+                Support Staff: support@company.com / support123
+              </li>
+            </ul>
+          </div>
+          <div
+            data-testid="toast-container"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
