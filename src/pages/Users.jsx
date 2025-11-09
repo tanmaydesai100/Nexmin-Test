@@ -247,12 +247,12 @@ const Users = () => {
   const emptyIcon = <PeopleIcon style={{ fontSize: '64px', color: '#cbd5e0' }} />;
 
   return (
-    <div className="bg-gray-50 min-h-screen">
-      <div className="max-w-7xl mx-auto py-4 md:py-6 px-4 md:px-6">
+    <div className="min-h-screen py-4 md:py-6 px-4 md:px-6">
+      <div className="max-w-7xl mx-auto">
         <div
-          className="bg-white p-4 md:p-6 rounded-lg shadow-md"
+          className="bg-white p-4 md:p-6 rounded-lg"
           style={{
-            background: 'linear-gradient(135deg, #ffffff 0%, #f8f9fa 100%)',
+            boxShadow: '0 10px 40px rgba(0, 0, 0, 0.3)',
           }}
         >
           <div className="flex items-center justify-between mb-4 md:mb-6">
