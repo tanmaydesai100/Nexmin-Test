@@ -1,5 +1,5 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
+import { render, screen, fireEvent } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
 import Dashboard from '../../pages/Dashboard';
@@ -148,6 +148,66 @@ describe('Dashboard', () => {
     );
     
     expect(screen.getByText('Revenue Trend (Last 3 Months)')).toBeInTheDocument();
+  });
+
+  test('clicks on View All link for Orders', () => {
+    render(
+      <Provider store={store}>
+        <Dashboard />
+      </Provider>
+    );
+    
+    // Find all links and get the one that goes to /orders
+    const allLinks = screen.getAllByRole('link');
+    const ordersLink = allLinks.find(link => link.getAttribute('href') === '/orders');
+    
+    expect(ordersLink).toBeInTheDocument();
+    
+    // Click on the link
+    fireEvent.click(ordersLink);
+    
+    // Verify the link has the correct href
+    expect(ordersLink).toHaveAttribute('href', '/orders');
+  });
+
+  test('clicks on View All link for Accounts', () => {
+    render(
+      <Provider store={store}>
+        <Dashboard />
+      </Provider>
+    );
+    
+    // Find all links and get the one that goes to /accounts
+    const allLinks = screen.getAllByRole('link');
+    const accountsLink = allLinks.find(link => link.getAttribute('href') === '/accounts');
+    
+    expect(accountsLink).toBeInTheDocument();
+    
+    // Click on the link
+    fireEvent.click(accountsLink);
+    
+    // Verify the link has the correct href
+    expect(accountsLink).toHaveAttribute('href', '/accounts');
+  });
+
+  test('clicks on View All link for Users', () => {
+    render(
+      <Provider store={store}>
+        <Dashboard />
+      </Provider>
+    );
+    
+    // Find all links and get the one that goes to /users
+    const allLinks = screen.getAllByRole('link');
+    const usersLink = allLinks.find(link => link.getAttribute('href') === '/users');
+    
+    expect(usersLink).toBeInTheDocument();
+    
+    // Click on the link
+    fireEvent.click(usersLink);
+    
+    // Verify the link has the correct href
+    expect(usersLink).toHaveAttribute('href', '/users');
   });
 });
 
