@@ -3,9 +3,9 @@ import { render, screen, fireEvent, waitFor } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { BrowserRouter, MemoryRouter } from 'react-router-dom';
 import { configureStore } from '@reduxjs/toolkit';
-import Login from './Login';
-import authReducer from '../redux/authSlice';
-import { ROLES } from '../utils/permissions';
+import Login from '../../pages/Login';
+import authReducer from '../../redux/authSlice';
+import { ROLES } from '../../utils/permissions';
 
 // Mock react-toastify
 jest.mock('react-toastify', () => ({
@@ -17,7 +17,7 @@ jest.mock('react-toastify', () => ({
 }));
 
 // Mock LoadingRing component
-jest.mock('../components/LoadingRing', () => {
+jest.mock('../../components/LoadingRing', () => {
   return function LoadingRing({ loading, color, size }) {
     if (!loading) return null;
     return <div data-testid="loading-ring">Loading...</div>;

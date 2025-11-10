@@ -3,8 +3,8 @@ import { render, screen } from '@testing-library/react';
 import { Provider } from 'react-redux';
 import { BrowserRouter, MemoryRouter } from 'react-router-dom';
 import { configureStore } from '@reduxjs/toolkit';
-import ProtectedRoute from './ProtectedRoute';
-import authReducer from '../redux/authSlice';
+import ProtectedRoute from '../../router/ProtectedRoute';
+import authReducer from '../../redux/authSlice';
 
 describe('ProtectedRoute Test', () => {
   let store;
